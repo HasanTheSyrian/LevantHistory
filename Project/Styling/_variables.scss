@@ -1,0 +1,59 @@
+:root {
+  --bg: #ffe6de;
+  --w: white;
+  --b: black;
+
+  //desert
+  --desOne: #ffddd3;
+  --desTwo: #ffddd2;
+  --desThree: #ff9372;
+  --desFour: #a15151;
+
+  --dScroll: #bb5e5e;
+
+  //desert hover values
+  --headerDesHover: #ffb59d;
+
+  //axy
+  --axyOne: #ff9372;
+  --axyTwo: black;
+
+  --aScroll: rgb(36, 36, 36);
+
+  //axy hover values
+  --headerAxyHover: #ffbaa5;
+}
+
+.desert {
+  //default values
+
+  --scroll: var(--dScroll);
+
+  --headerBG: var(--desFour);
+  --headerTxt: var(--desTwo);
+
+  --title: var(--desFour);
+  --paragraph: var(--axyThree);
+
+  --card: var(--bg);
+
+  //hover values
+  --headerTxtHvr: var(--headerDesHover);
+}
+
+.axy {
+  //default values
+
+  --scroll: var(--aScroll);
+
+  --headerBG: var(--axyTwo);
+  --headerTxt: var(--axyOne);
+
+  --title: var(axyTwo);
+  --paragraph: var(--axyTwo);
+
+  --card: var(--bg);
+
+  //hover values
+  --headerTxtHvr: var(--headerAxyHover);
+}

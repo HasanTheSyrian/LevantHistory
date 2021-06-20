@@ -1,0 +1,320 @@
+@import "_variables";
+@import "_mixins";
+
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap"); //Krona One
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap"); //Alata
+@import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@700&display=swap"); //Fahwkwang
+@import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@700&family=Sen&display=swap"); //Sen
+@import url("https://cdn.discordapp.com/attachments/282502094202732544/851734952554790922/Andalus.ttf"); //Andalus
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap"); //Raleway
+
+//SCROLL BAR
+
+html {
+  scrollbar-color: #ffb59c #ffffff;
+  scrollbar-width: thin;
+  // color: #ff0000;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scroll);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--headerBG);
+}
+
+body {
+  background-color: var(--bg);
+  padding: 0;
+  margin: 0;
+}
+
+*::selection {
+  background: var(--headerAxyHover);
+}
+
+#pageOne {
+  @include flexCenter(center, center);
+  height: 100vh;
+  flex-direction: column;
+  background: url(../Pictures/bg.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header {
+  background-color: var(--headerBG);
+
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+
+  a {
+    @include flexCenter(center, center);
+  }
+
+  #logo {
+    cursor: pointer;
+    height: 100%;
+    width: 30px;
+    margin: 0 3rem 0 3rem;
+  }
+
+  #headerText {
+    @include flexCenter(center, center);
+    height: 100%;
+    flex-direction: row;
+  }
+
+  #settings {
+    width: 30px;
+    position: absolute;
+    right: 0;
+    margin: 1rem;
+  }
+
+  #offcanvasRight {
+    background-color: var(--headerBG) !important;
+    border-left: white solid 3px;
+    // color: var(--text);
+  }
+
+  #offcanvasRight .offcanvas-body {
+    flex-grow: 0;
+    padding: 0 0 0 1rem;
+  }
+
+  #offcanvasRight .offcanvas-body p {
+    color: var(--headerTxt);
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0 0 0.5rem 1rem;
+  }
+
+  #offcanvasRight .offcanvas-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  #closeBtn {
+    background-color: rgba(255, 255, 255, 0.486);
+    // background: red;
+    // fill: red !important;
+    align-self: flex-end;
+    margin: 5px;
+  }
+
+  #closeBtn svg {
+    fill: white;
+  }
+
+  #sideLogo {
+    align-self: center;
+    margin: 10px;
+    width: 35px;
+  }
+
+  .offcanvasRightLabel {
+    color: white;
+    margin: 0;
+    font-family: Fahkwang;
+  }
+
+  hr {
+    background-color: white;
+    width: 80%;
+    height: 3px;
+    border-radius: 1px;
+    align-self: center;
+  }
+
+  .countries {
+    color: var(--headerTxt);
+    cursor: pointer;
+    font-family: Andalus;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: 36px;
+    line-height: 55px;
+
+    margin: 0 1rem 0 1rem;
+  }
+
+  p:hover {
+    color: var(--headerTxtHvr);
+    // color: black;
+  }
+}
+
+//main content //main content //main content //main content //main content
+//main content //main content //main content //main content //main content
+//main content //main content //main content //main content //main content
+//main content //main content //main content //main content //main content
+
+#mainContent {
+  width: 80%;
+  text-align: center;
+  flex-direction: column;
+
+  h1 {
+    color: var(--title);
+    margin: 0 0 1rem 0;
+    font-family: Fahkwang;
+    font-size: 72px;
+  }
+
+  h2 {
+    color: var(--title);
+    margin: 5rem 0 0.75rem 0;
+    font-family: Fahkwang;
+    font-size: 48px;
+  }
+
+  .paragraph {
+    font-family: Sen;
+    margin: 0;
+    font-size: 36px;
+  }
+
+  #second {
+    font-size: 24px;
+  }
+}
+
+//second page //second page //second page //second page //second page
+//second page //second page //second page //second page //second page
+//second page //second page //second page //second page //second page
+//second page //second page //second page //second page //second page
+
+#pageTwo {
+  @include flexCenter(center, center);
+  height: 100vh;
+
+  flex-direction: column;
+
+  background: url(../Pictures/bg2.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  position: relative;
+  z-index: 1;
+}
+
+#pageTwo h3 {
+  color: var(--title);
+  font-family: Fahkwang;
+  font-size: 36px;
+  margin: 1rem;
+
+  letter-spacing: 0.325em;
+}
+
+#cardContainer {
+  @include flexCenter(center, center);
+  width: 80%;
+
+  flex-wrap: wrap;
+  gap: 30px 20px;
+}
+
+#cardContainer .card {
+  background-color: var(--card);
+  @include flexCenter(center, center);
+  width: 430px;
+  height: 338px;
+
+  box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.541);
+  transform: translateY(-0.5em);
+}
+
+//footer //footer //footer //footer //footer
+//footer //footer //footer //footer //footer
+//footer //footer //footer //footer //footer
+//footer //footer //footer //footer //footer
+
+#footer {
+  width: 100%;
+  height: 20vh;
+  background-color: var(--headerBG);
+  @include flexCenter(center, center);
+  flex-direction: row;
+  position: relative;
+
+  // padding: .5rem;
+}
+
+#footerCenter {
+  @include flexCenter(center, center);
+  flex-direction: column;
+  height: 100%;
+  width: 400px;
+  position: relative;
+}
+
+#footerLogo {
+  width: 50px;
+  display: flex;
+  align-self: center;
+}
+
+#copyright {
+  color: rgba(255, 255, 255, 0.651);
+  position: absolute;
+  bottom: 0;
+}
+
+.footerDivider {
+  background-color: rgba(255, 255, 255, 0.356);
+  width: 1px;
+  height: 70%;
+  margin: 1rem;
+  // transform: rotate(90deg);
+}
+
+.footerH {
+  font-size: 20px;
+  text-align: left;
+  color: var(--axyOne);
+}
+
+#footer p {
+  font-size: 17px;
+  color: white;
+}
+
+#footer #mwl {
+  font-size: 10px;
+  position: absolute;
+  margin: 3px;
+  bottom: 0;
+}
