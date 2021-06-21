@@ -169,7 +169,7 @@ body {
 .header #offcanvasRight .offcanvas-body p {
   color: var(--headerTxt);
   cursor: pointer;
-  font-size: 20px;
+  font-size: clamp(1rem, 1vw, 2rem);
   margin: 0 0 0.5rem 1rem;
 }
 
@@ -197,6 +197,7 @@ body {
 }
 
 .header .offcanvasRightLabel {
+  font-size: clamp(1rem, 1vw, 2rem);
   color: white;
   margin: 0;
   font-family: Fahkwang;
@@ -410,5 +411,33 @@ body {
   position: absolute;
   margin: 3px;
   bottom: 0;
+}
+
+.country {
+  background-color: #ffe6de;
+}
+
+#syria {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate -100%;
+          transform: translate -100%;
+}
+
+.land {
+  fill: #cccccc;
+  fill-opacity: 1;
+  stroke: white;
+  stroke-opacity: 1;
+  stroke-width: 0.5;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.land:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-0.5em);
+          transform: translateY(-0.5em);
 }
 /*# sourceMappingURL=index.css.map */

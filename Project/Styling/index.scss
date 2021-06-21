@@ -109,7 +109,9 @@ body {
   #offcanvasRight .offcanvas-body p {
     color: var(--headerTxt);
     cursor: pointer;
-    font-size: 20px;
+    // font-size: 20px;
+    font-size: clamp(1rem, 1vw, 2rem);
+
     margin: 0 0 0.5rem 1rem;
   }
 
@@ -136,6 +138,8 @@ body {
   }
 
   .offcanvasRightLabel {
+    font-size: clamp(1rem, 1vw, 2rem);
+
     color: white;
     margin: 0;
     font-family: Fahkwang;
@@ -317,4 +321,28 @@ body {
   position: absolute;
   margin: 3px;
   bottom: 0;
+}
+
+//!syria page
+
+.country {
+  background-color: #ffe6de;
+}
+
+#syria {
+  @include absoluteCenter;
+}
+
+.land {
+  fill: #cccccc;
+  fill-opacity: 1;
+  stroke: white;
+  stroke-opacity: 1;
+  stroke-width: 0.5;
+  transition: all 0.5s ease;
+}
+
+.land:hover {
+  cursor: pointer;
+  transform: translateY(-0.5em);
 }
