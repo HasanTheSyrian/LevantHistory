@@ -153,6 +153,7 @@ body {
     align-self: center;
   }
 
+  //header text
   .countries {
     color: var(--headerTxt);
     cursor: pointer;
@@ -160,7 +161,8 @@ body {
     font-style: normal;
     font-weight: normal;
     letter-spacing: 1px;
-    font-size: 36px;
+    // font-size: 36px;
+    font-size: clamp(2rem, 2vw, 4rem);
     line-height: 55px;
 
     margin: 0 1rem 0 1rem;
@@ -186,24 +188,23 @@ body {
     color: var(--title);
     margin: 0 0 1rem 0;
     font-family: Fahkwang;
-    font-size: 72px;
+    // font-size: 72px;
+    font-size: clamp(4rem, 4vw, 6rem);
   }
 
   h2 {
     color: var(--title);
     margin: 5rem 0 0.75rem 0;
     font-family: Fahkwang;
-    font-size: 48px;
+    // font-size: 48px;
+    font-size: clamp(3rem, 2vw, 5rem);
   }
 
   .paragraph {
     font-family: Sen;
     margin: 0;
-    font-size: 36px;
-  }
-
-  #second {
-    font-size: 24px;
+    // font-size: 36px;
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
   }
 }
 
@@ -345,4 +346,22 @@ body {
 .land:hover {
   cursor: pointer;
   transform: translateY(-0.5em);
+}
+
+@media only screen and (max-width: 1120px) {
+  #mainContent {
+    width: 90%;
+  }
+
+  #mainContent h2 {
+    margin: 3rem 0 0.75rem 0;
+  }
+
+  .countries {
+    display: none;
+  }
+
+  br {
+    display: none;
+  }
 }
