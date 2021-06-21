@@ -1,2 +1,0 @@
-# Boiler
- Boilerplate code + config
