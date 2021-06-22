@@ -374,7 +374,7 @@ body {
 
 @media only screen and (max-width: 700px) {
   #pageOne {
-    background: url(../Pictures/mobileBG.svg) no-repeat center center fixed;
+    background: url(../Pictures/tabletBG.svg) no-repeat center center fixed;
   }
 
   #mainContent {
@@ -404,6 +404,9 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+  #pageOne {
+    background: url(../Pictures/mobileBG.svg) no-repeat center center fixed;
+  }
   .header {
     height: 60px;
   }
@@ -436,10 +439,6 @@ body {
 }
 
 @media only screen and (max-width: 400px) {
-  #pageOne {
-    background: url(../Pictures/mobileBG.svg) no-repeat center center fixed;
-  }
-
   #mainContent h1 {
     font-size: clamp(2rem, 4vw, 6rem);
   }
