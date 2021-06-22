@@ -385,10 +385,21 @@ body {
 }
 
 .footerDivider {
-  background-color: rgba(255, 255, 255, 0.356);
+  background-color: rgba(255, 255, 255, 0.637);
   width: 1px;
   height: 70%;
   margin: 1rem;
+}
+
+#footer .footerText {
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footerH {
@@ -403,7 +414,7 @@ body {
 }
 
 #footer #mwl {
-  font-size: 10px;
+  font-size: 13px;
   position: absolute;
   margin: 3px;
   bottom: 0;
@@ -481,12 +492,52 @@ body {
   br {
     display: none;
   }
+  #footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px;
+  }
+  #footerCenter {
+    width: 100px;
+  }
+  #footer p {
+    margin: 1px !important;
+  }
+  #footerLogo {
+    width: 40px;
+  }
+  #footer .footerText {
+    height: 120px;
+  }
+  #copyright {
+    display: none;
+  }
+  #footer #copyrightBottom {
+    text-align: center;
+    display: block !important;
+    position: absolute;
+    bottom: 0;
+    margin: 10px !important;
+  }
+  #mwl {
+    display: none;
+  }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) and (max-height: 1000px) {
   #pageOne {
     background: url(../Pictures/mobileBG.svg) no-repeat center center fixed;
   }
+}
+
+@media only screen and (max-width: 500px) {
   .header {
     height: 60px;
   }
@@ -510,6 +561,9 @@ body {
   #mainContent #second {
     font-size: clamp(1rem, 4vw, 1.9rem);
   }
+  #footer #copyrightBottom {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -525,6 +579,9 @@ body {
   }
   #mainContent #second {
     font-size: clamp(0.7rem, 4vw, 1.9rem);
+  }
+  #footer #copyrightBottom {
+    font-size: .7rem;
   }
 }
 /*# sourceMappingURL=index.css.map */
