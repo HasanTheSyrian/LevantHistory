@@ -437,6 +437,12 @@ body {
           transform: translateY(-0.5em);
 }
 
+@media only screen and (max-width: 1920px) and (min-height: 1080px) {
+  br {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1120px) {
   #mainContent {
     width: 90%;
@@ -449,6 +455,47 @@ body {
   }
   br {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #pageOne {
+    background: url(../Pictures/mobileBG.svg) no-repeat center center fixed;
+  }
+  #mainContent {
+    width: 90%;
+  }
+  #mainContent h1 {
+    font-size: clamp(3.5rem, 4vw, 6rem);
+  }
+  #mainContent h2 {
+    font-size: clamp(3rem, 2vw, 5rem);
+    margin: 2rem 0 0.75rem 0;
+  }
+  #mainContent .paragraph {
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
+  }
+  .countries {
+    display: none;
+  }
+  br {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #mainContent h1 {
+    font-size: clamp(3rem, 4vw, 6rem);
+  }
+  #mainContent h2 {
+    font-size: clamp(2.5rem, 2vw, 5rem);
+    margin: 2rem 0 0.75rem 0;
+  }
+  #mainContent .paragraph {
+    font-size: clamp(1.3rem, 2vw, 1.9rem);
+  }
+  #mainContent #second {
+    font-size: clamp(1rem, 4vw, 1.9rem);
   }
 }
 /*# sourceMappingURL=index.css.map */
