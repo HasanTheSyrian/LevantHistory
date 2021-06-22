@@ -404,16 +404,16 @@ body {
 
 @media only screen and (max-width: 500px) {
   #mainContent h1 {
-    font-size: clamp(3rem, 4vw, 6rem);
+    font-size: clamp(2rem, 4vw, 6rem);
   }
 
   #mainContent h2 {
-    font-size: clamp(2.5rem, 2vw, 5rem);
+    font-size: clamp(1.5rem, 2vw, 5rem);
     margin: 2rem 0 0.75rem 0;
   }
 
   #mainContent .paragraph {
-    font-size: clamp(1.3rem, 2vw, 1.9rem);
+    font-size: clamp(1rem, 2vw, 1.9rem);
   }
 
   #mainContent #second {
