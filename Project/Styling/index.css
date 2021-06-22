@@ -517,7 +517,11 @@ body {
   .footerH {
     margin: 0;
   }
-  #dev {
+  #devDesk {
+    display: none;
+  }
+  #devMobile {
+    display: block !important;
     font-size: 1.2rem;
   }
   #footer .footerText {
@@ -589,6 +593,12 @@ body {
   }
   #footer #copyrightBottom {
     font-size: 0.7rem;
+  }
+  #footerCenter {
+    width: 15vw;
+  }
+  #footerLogo {
+    width: 35px;
   }
 }
 /*# sourceMappingURL=index.css.map */
