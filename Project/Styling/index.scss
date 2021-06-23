@@ -183,6 +183,7 @@ body {
 #mainContent {
   width: 80%;
   text-align: center;
+  @include flexCenter(center, center);
   flex-direction: column;
 
   h1 {
@@ -204,8 +205,16 @@ body {
   .paragraph {
     font-family: Sen;
     margin: 0;
+    width: 90%;
     // font-size: 36px;
     font-size: clamp(1.5rem, 3vw, 1.9rem);
+  }
+
+  #second {
+    text-align: center;
+    display: flex;
+    align-self: center;
+    width: 80%;
   }
 }
 
@@ -442,7 +451,7 @@ body {
   }
 
   #footer .footerText p {
-    font-size: clamp(.7rem, 1vw, 1.5rem);
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
 
     color: white;
     margin: 1px;
@@ -451,7 +460,6 @@ body {
   #footerLogo {
     width: 40px;
   }
-
 }
 
 //?
@@ -508,8 +516,6 @@ body {
     align-self: flex-start;
     margin-left: 2rem;
   }
-
-
 }
 
 //?
