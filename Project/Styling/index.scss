@@ -440,6 +440,18 @@ body {
     margin: 0;
     color: var(--axyOne);
   }
+
+  #footer .footerText p {
+    font-size: clamp(.7rem, 1vw, 1.5rem);
+
+    color: white;
+    margin: 1px;
+  }
+
+  #footerLogo {
+    width: 40px;
+  }
+
 }
 
 //?
@@ -485,13 +497,11 @@ body {
 
   .footerH {
     font-size: clamp(1rem, 2vw, 2rem);
-
   }
 
-  .footerDivider, #secondDivider {
-
+  .footerDivider,
+  #secondDivider {
     margin: 1rem;
-
   }
 
   #dev {
@@ -499,12 +509,7 @@ body {
     margin-left: 2rem;
   }
 
-  #footer .footerText p {
-    font-size: clamp(1rem, 1vw, 2rem);
 
-    color: white;
-    margin: 1px;
-  }
 }
 
 //?

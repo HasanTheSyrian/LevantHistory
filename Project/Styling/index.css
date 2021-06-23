@@ -506,6 +506,14 @@ body {
     margin: 0;
     color: var(--axyOne);
   }
+  #footer .footerText p {
+    font-size: clamp(0.7rem, 1vw, 1.5rem);
+    color: white;
+    margin: 1px;
+  }
+  #footerLogo {
+    width: 40px;
+  }
 }
 
 @media only screen and (max-width: 500px) and (max-height: 1000px) {
@@ -541,18 +549,14 @@ body {
   .footerH {
     font-size: clamp(1rem, 2vw, 2rem);
   }
-  .footerDivider, #secondDivider {
+  .footerDivider,
+  #secondDivider {
     margin: 1rem;
   }
   #dev {
     -ms-flex-item-align: start;
         align-self: flex-start;
     margin-left: 2rem;
-  }
-  #footer .footerText p {
-    font-size: clamp(1rem, 1vw, 2rem);
-    color: white;
-    margin: 1px;
   }
 }
 
