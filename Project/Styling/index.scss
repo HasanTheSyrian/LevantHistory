@@ -14,7 +14,7 @@
 html {
   scrollbar-color: #ffb59c #ffffff;
   scrollbar-width: thin;
-  background-color: #FFE6DE;
+  background-color: #ffe6de;
 }
 
 /* width */
@@ -56,8 +56,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: #FFE6DE;
-
+  background-color: #ffe6de;
 }
 
 .header {
@@ -226,8 +225,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: #FFE6DE;
-
+  background-color: #ffe6de;
 
   position: relative;
   z-index: 1;
@@ -275,64 +273,78 @@ body {
   width: 100%;
   height: 20vh;
   background-color: var(--headerBG);
-  @include flexCenter(center, center);
+
+  @include flexCenter(flex-start, center);
   flex-direction: row;
-  position: relative;
-
-  // padding: .5rem;
-}
-
-#footerCenter {
-  @include flexCenter(center, center);
-  flex-direction: column;
-  height: 100%;
-  width: 400px;
   position: relative;
 }
 
 #footerLogo {
-  width: 50px;
+  width: 70px;
+  min-width: 40px;
   display: flex;
-  align-self: center;
-}
-
-#copyright {
-  color: rgba(255, 255, 255, 0.651);
-  position: absolute;
-  bottom: 0;
+  justify-content: flex-end;
+  margin: 0 5rem 0 5rem;
 }
 
 .footerDivider {
   background-color: rgba(255, 255, 255, 0.637);
   width: 1px;
   height: 70%;
-  margin: 1rem;
-  // transform: rotate(90deg);
+  margin: 0 3rem 0 0;
 }
 
-#footer .footerText {
-  height: 150px;
-  display: flex;
-  flex-direction: column;
+#secondDivider {
+  margin: 0 3rem 0 3rem;
+}
+
+.textContainer {
+  @include flexCenter(center, center);
+  flex-direction: row;
 }
 
 .footerH {
-  font-size: 20px;
+  font-size: clamp(0.5rem, 2rem, 4rem);
   text-align: left;
+  margin: 0;
   color: var(--axyOne);
 }
 
-#footer p {
-  font-size: 17px;
+#dev {
+  align-self: flex-start;
+  margin-left: 2rem;
+}
+
+#footer .footerText p {
+  font-size: clamp(1rem, 1vw, 2rem);
+
   color: white;
+  margin: 1px;
+}
+
+#thirdSection {
+  text-align: center;
+  margin-right: 3rem;
+}
+
+#copyright {
+  color: rgba(255, 255, 255, 0.932);
 }
 
 #footer #mwl {
-  font-size: 13px;
-  position: absolute;
+  // font-size: 13px;
+  color: white;
+  // position: absolute;
   margin: 3px;
-  bottom: 0;
+  // bottom: 0;
 }
+// #footerCenter {
+//   @include flexCenter(center, center);
+//   flex-direction: column;
+//   height: 100%;
+//   width: 400px;
+//   position: relative;
+// }
 
 //!syria page
 
@@ -384,6 +396,10 @@ body {
   br {
     display: none;
   }
+
+  #thirdSection {
+    display: none;
+  }
 }
 
 //?
@@ -418,64 +434,11 @@ body {
     display: none;
   }
 
-  //footer
-
-  #footer {
-    @include flexCenter(center, center);
-    padding: 20px;
-  }
-
-  #footerCenter {
-    width: 100px;
-  }
-
-  #footer p {
-    // text-align: center;
-    margin: 1px !important;
-    font-size: 1rem;
-  }
-
-  #footerLogo {
-    width: 40px;
-  }
-
   .footerH {
+    font-size: clamp(0.3rem, 1.5rem, 2rem);
+    text-align: left;
     margin: 0;
-  }
-
-  #devDesk{
-
-    display: none;
-
-  }
-
-  #devMobile{
-
-    display: block !important;
-
-    font-size: 1.2rem;
-
-  }
-
-  #footer .footerText {
-    height: 100px;
-  }
-
-  #copyright {
-    display: none;
-  }
-
-  #footer #copyrightBottom {
-    text-align: center;
-    display: block !important;
-    position: absolute;
-    bottom: 0;
-
-    margin: 10px !important;
-  }
-
-  #mwl {
-    display: none;
+    color: var(--axyOne);
   }
 }
 
@@ -519,10 +482,6 @@ body {
   #mainContent #second {
     font-size: clamp(1rem, 4vw, 1.9rem);
   }
-
-  #footer #copyrightBottom {
-    font-size: 1rem;
-  }
 }
 
 //?
@@ -543,19 +502,5 @@ body {
 
   #mainContent #second {
     font-size: clamp(0.7rem, 4vw, 1.9rem);
-  }
-
-  #footer #copyrightBottom {
-    font-size: 0.7rem;
-  }
-
-  #footerCenter{
-
-    width: 15vw;
-
-  }
-
-  #footerLogo {
-    width: 35px;
   }
 }
