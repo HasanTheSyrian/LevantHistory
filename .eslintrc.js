@@ -25,5 +25,7 @@ module.exports = {
     "no-param-reassign":    "off",
     "max-len":              "off",
     "block-spacing":        "off",
+    "no-use-before-define": "off",
+    "no-unused-vars":       "off",
   },
 };

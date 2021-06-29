@@ -1,31 +1,45 @@
-const headerBtn = document.querySelector("#logo");
-console.log(headerBtn);
-headerBtn.addEventListener("click", () => {
-  document.location.href = "../project/index.html";
-});
+const container = document.querySelector("#cardContainer");
+const card = document.querySelector(".card");
 
-function navSlide() {
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector(".nav-links");
-  const navLinks = document.querySelectorAll(".nav-links li");
+const widthParse = () => {
+  const parentDivWidth = window.getComputedStyle(card, null).getPropertyValue("width");
+  const finalWidth = parseInt(parentDivWidth, 10);
 
-  burger.addEventListener("click", () => {
-    // Toggle Nav
-    nav.classList.toggle("nav-active");
+  return finalWidth;
+};
 
-    // Animate Links
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${
-          index / 7 + 0.5
-        }s`;
-      }
-    });
-    // Burger Animation
-    burger.classList.toggle("toggle");
-  });
+container.scrollLeft = widthParse() * 2;
+
+let startY;
+let startX;
+let scrollLeft;
+let scrollTop;
+let isDown;
+
+container.addEventListener("mousedown", (e) => mouseIsDown(e));
+container.addEventListener("mouseup", (e) => mouseUp(e));
+container.addEventListener("mouseleave", (e) => mouseLeave(e));
+container.addEventListener("mousemove", (e) => mouseMove(e));
+
+function mouseIsDown(e) {
+  isDown = true;
+  startY = e.pageY - container.offsetTop;
+  startX = e.pageX - container.offsetLeft;
+  scrollLeft = container.scrollLeft;
+  scrollTop = container.scrollTop;
 }
+function mouseUp(e) {
+  isDown = false;
+}
+function mouseLeave(e) {
+  isDown = false;
+}
+function mouseMove(e) {
+  if (isDown) {
+    e.preventDefault();
 
-navSlide();
+    const x = e.pageX - container.offsetLeft;
+    const walkX = x - startX;
+    container.scrollLeft = scrollLeft - walkX;
+  }
+}

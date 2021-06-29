@@ -232,7 +232,7 @@ body {
 }
 
 #mainContent {
-  width: 80%;
+  width: 70%;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,22 +311,55 @@ body {
 }
 
 #cardContainer {
+  max-width: 700px;
+  cursor: -webkit-grab;
+  cursor: grab;
+  border-radius: 10px;
+  height: 390px;
+  scrollbar-color: #ffb59c #ffffff;
+  scrollbar-width: thin;
+  overflow: hidden;
+  overflow-x: auto;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
-#cardContainer .card {
+#cardContainer .shadowSide {
+  position: -webkit-sticky;
+  position: sticky;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100px;
+  height: 110%;
+  z-index: 1;
+}
+
+#cardContainer #shadowOne {
+  left: -25px;
+  -webkit-box-shadow: inset 55px 10px 30px 0 #ffe6de;
+          box-shadow: inset 55px 10px 30px 0 #ffe6de;
+}
+
+#cardContainer #shadowTwo {
+  right: -25px;
+  -webkit-box-shadow: inset -55px 10px 30px 0 #ffe6de;
+          box-shadow: inset -55px 10px 30px 0 #ffe6de;
+}
+
+#cardContainer .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#cardContainer .content .card {
   background-color: var(--card);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -337,16 +370,31 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   width: 430px;
   height: 338px;
-  -webkit-box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.25);
-          box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.25);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: 10px;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-.card:hover {
+#cardContainer .content .card .cardCountry {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#cardContainer .content .card:hover {
   -webkit-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.541);
           box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.541);
   -webkit-transform: translateY(-0.5em);
@@ -449,7 +497,7 @@ body {
   background-color: #ffe6de;
 }
 
-#syria {
+#syriaMiddle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -481,6 +529,9 @@ body {
 
 @media only screen and (max-width: 1120px) {
   #mainContent {
+    width: 90%;
+  }
+  #second {
     width: 90%;
   }
   #mainContent h2 {

@@ -99,7 +99,6 @@ body {
   #offcanvasRight {
     background-color: var(--headerBG) !important;
     border-left: white solid 3px;
-    // color: var(--text);
   }
 
   #offcanvasRight .offcanvas-body {
@@ -181,7 +180,7 @@ body {
 //main content //main content //main content //main content //main content
 
 #mainContent {
-  width: 80%;
+  width: 70%;
   text-align: center;
   @include flexCenter(center, center);
   flex-direction: column;
@@ -238,39 +237,90 @@ body {
 
   position: relative;
   z-index: 1;
-}
 
-#pageTwo h3 {
-  color: var(--title);
-  font-family: Fahkwang;
-  font-size: 36px;
-  margin: 1rem;
+  h3 {
+    color: var(--title);
+    font-family: Fahkwang;
+    font-size: 36px;
+    margin: 1rem;
 
-  letter-spacing: 0.325em;
+    letter-spacing: 0.325em;
+  }
 }
 
 #cardContainer {
-  @include flexCenter(center, center);
-  width: 80%;
+  max-width: 700px;
+  cursor: grab;
+  border-radius: 10px;
+  height: 390px;
 
-  flex-wrap: wrap;
-  gap: 30px 20px;
-}
+  scrollbar-color: #ffb59c #ffffff;
+  scrollbar-width: thin;
 
-#cardContainer .card {
-  background-color: var(--card);
-  @include flexCenter(center, center);
-  width: 430px;
-  height: 338px;
+  overflow: hidden;
+  overflow-x: auto;
+  position: relative;
 
-  box-shadow: 1px 1px 13px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  transition: all 0.5s ease;
-}
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  // @include flexCenter(center, center);
+  flex-shrink: 0;
 
-.card:hover {
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.541);
-  transform: translateY(-0.5em);
+  .shadowSide {
+    position: sticky;
+    flex-shrink: 0;
+    width: 100px;
+    height: 110%;
+    z-index: 1;
+  }
+
+  #shadowOne {
+    left: -25px;
+
+    box-shadow: inset 55px 10px 30px 0 #ffe6de;
+  }
+
+  #shadowTwo {
+    right: -25px;
+
+    box-shadow: inset -55px 10px 30px 0 #ffe6de;
+  }
+
+  .content {
+    display: flex;
+
+    .card {
+      background-color: var(--card);
+      @include flexCenter(center, center);
+
+      // user-drag: none;
+      user-select: none;
+
+      width: 430px;
+      height: 338px;
+      flex-shrink: 0;
+      // z-index: -3;
+
+      margin: 10px;
+      position: relative;
+
+      box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      transition: all 0.5s ease;
+
+      .cardCountry{
+
+        user-select: none;
+
+      }
+
+      &:hover {
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.541);
+        transform: translateY(-0.5em);
+      }
+    }
+  }
 }
 
 //footer //footer //footer //footer //footer
@@ -361,7 +411,7 @@ body {
   background-color: #ffe6de;
 }
 
-#syria {
+#syriaMiddle {
   @include absoluteCenter;
 }
 
@@ -391,6 +441,10 @@ body {
 
 @media only screen and (max-width: 1120px) {
   #mainContent {
+    width: 90%;
+  }
+
+  #second {
     width: 90%;
   }
 
