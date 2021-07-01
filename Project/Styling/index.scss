@@ -309,10 +309,8 @@ body {
       border-radius: 20px;
       transition: all 0.5s ease;
 
-      .cardCountry{
-
+      .cardCountry {
         user-select: none;
-
       }
 
       &:hover {
@@ -514,6 +512,32 @@ body {
   #footerLogo {
     width: 40px;
   }
+
+  #cardContainer {
+    width: 450px;
+  }
+
+  #cardContainer .content .card {
+    background-color: black !important;
+
+    width: 400px;
+    height: 300px;
+
+    margin: 5px;
+
+    .cardCountry {
+      width: 75%;
+    }
+
+    #palestine {
+      width: 25%;
+    }
+
+    #jordan,
+    #lebanon {
+      width: 50%;
+    }
+  }
 }
 
 //?
@@ -570,6 +594,32 @@ body {
     align-self: flex-start;
     margin-left: 2rem;
   }
+
+  #cardContainer {
+    width: 400px;
+  }
+
+  #cardContainer .content .card {
+    background-color: black !important;
+
+    width: 370px;
+    height: 300px;
+
+    margin: 5px;
+
+    .cardCountry {
+      width: 75%;
+    }
+
+    #palestine {
+      width: 25%;
+    }
+
+    #jordan,
+    #lebanon {
+      width: 50%;
+    }
+  }
 }
 
 //?
@@ -590,5 +640,31 @@ body {
 
   #mainContent #second {
     font-size: clamp(0.7rem, 4vw, 1.9rem);
+  }
+
+  #cardContainer {
+    width: 350px;
+  }
+
+  #cardContainer .content .card {
+    background-color: black !important;
+
+    width: 300px;
+    height: 300px;
+
+    margin: 5px;
+
+    .cardCountry {
+      width: 75%;
+    }
+
+    #palestine {
+      width: 25%;
+    }
+
+    #jordan,
+    #lebanon {
+      width: 50%;
+    }
   }
 }

@@ -585,6 +585,25 @@ body {
   #footerLogo {
     width: 40px;
   }
+  #cardContainer {
+    width: 450px;
+  }
+  #cardContainer .content .card {
+    background-color: black !important;
+    width: 400px;
+    height: 300px;
+    margin: 5px;
+  }
+  #cardContainer .content .card .cardCountry {
+    width: 75%;
+  }
+  #cardContainer .content .card #palestine {
+    width: 25%;
+  }
+  #cardContainer .content .card #jordan,
+  #cardContainer .content .card #lebanon {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 500px) and (max-height: 1000px) {
@@ -629,6 +648,25 @@ body {
         align-self: flex-start;
     margin-left: 2rem;
   }
+  #cardContainer {
+    width: 400px;
+  }
+  #cardContainer .content .card {
+    background-color: black !important;
+    width: 370px;
+    height: 300px;
+    margin: 5px;
+  }
+  #cardContainer .content .card .cardCountry {
+    width: 75%;
+  }
+  #cardContainer .content .card #palestine {
+    width: 25%;
+  }
+  #cardContainer .content .card #jordan,
+  #cardContainer .content .card #lebanon {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -644,6 +682,25 @@ body {
   }
   #mainContent #second {
     font-size: clamp(0.7rem, 4vw, 1.9rem);
+  }
+  #cardContainer {
+    width: 350px;
+  }
+  #cardContainer .content .card {
+    background-color: black !important;
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+  }
+  #cardContainer .content .card .cardCountry {
+    width: 75%;
+  }
+  #cardContainer .content .card #palestine {
+    width: 25%;
+  }
+  #cardContainer .content .card #jordan,
+  #cardContainer .content .card #lebanon {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=index.css.map */
