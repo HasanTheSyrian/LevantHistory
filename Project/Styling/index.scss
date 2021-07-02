@@ -5,9 +5,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap"); //Alata
 @import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@700&display=swap"); //Fahwkwang
 @import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@700&family=Sen&display=swap"); //Sen
-@import url("https://cdn.discordapp.com/attachments/282502094202732544/851734952554790922/Andalus.ttf"); //Andalus
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap"); //Raleway
+@font-face {
+  font-family: "Andalus";
+  src: url("//db.onlinewebfonts.com/t/8269ea45efd48785edffb3ed85a5dc8a.eot");
+  src: url("//db.onlinewebfonts.com/t/8269ea45efd48785edffb3ed85a5dc8a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8269ea45efd48785edffb3ed85a5dc8a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8269ea45efd48785edffb3ed85a5dc8a.woff") format("woff"), url("//db.onlinewebfonts.com/t/8269ea45efd48785edffb3ed85a5dc8a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8269ea45efd48785edffb3ed85a5dc8a.svg#Andalus") format("svg");
+}
 
 //SCROLL BAR
 
@@ -109,7 +112,6 @@ body {
   #offcanvasRight .offcanvas-body p {
     color: var(--headerTxt);
     cursor: pointer;
-    // font-size: 20px;
     font-size: clamp(1rem, 1vw, 2rem);
 
     margin: 0 0 0.5rem 1rem;
@@ -121,8 +123,6 @@ body {
 
   #closeBtn {
     background-color: rgba(255, 255, 255, 0.486);
-    // background: red;
-    // fill: red !important;
     align-self: flex-end;
     margin: 5px;
   }
@@ -161,7 +161,6 @@ body {
     font-style: normal;
     font-weight: normal;
     letter-spacing: 1px;
-    // font-size: 36px;
     font-size: clamp(2rem, 2vw, 4rem);
     line-height: 55px;
 
@@ -170,7 +169,6 @@ body {
 
   p:hover {
     color: var(--headerTxtHvr);
-    // color: black;
   }
 }
 
@@ -189,7 +187,6 @@ body {
     color: var(--title);
     margin: 0 0 1rem 0;
     font-family: Fahkwang;
-    // font-size: 72px;
     font-size: clamp(4rem, 4vw, 6rem);
   }
 
@@ -197,7 +194,6 @@ body {
     color: var(--title);
     margin: 5rem 0 0.75rem 0;
     font-family: Fahkwang;
-    // font-size: 48px;
     font-size: clamp(3rem, 2vw, 5rem);
   }
 
@@ -262,9 +258,7 @@ body {
   position: relative;
 
   display: flex;
-  // justify-content: center;
   align-items: center;
-  // @include flexCenter(center, center);
   flex-shrink: 0;
 
   .shadowSide {
@@ -294,13 +288,11 @@ body {
       background-color: var(--card);
       @include flexCenter(center, center);
 
-      // user-drag: none;
       user-select: none;
 
       width: 430px;
       height: 338px;
       flex-shrink: 0;
-      // z-index: -3;
 
       margin: 10px;
       position: relative;
@@ -389,42 +381,58 @@ body {
 }
 
 #footer #mwl {
-  // font-size: 13px;
   color: white;
-  // position: absolute;
   margin: 3px;
-  // bottom: 0;
 }
-// #footerCenter {
-//   @include flexCenter(center, center);
-//   flex-direction: column;
-//   height: 100%;
-//   width: 400px;
-//   position: relative;
-// }
 
 //!syria page
+//!syria page
 
-.country {
+#syriaPage {
+  height: 100vh;
+  // @include flexCenter(center, center);
+  display: flex;
+  flex-direction: column;
   background-color: #ffe6de;
+
+  #syriaMiddle {
+    align-self: center;
+
+    width: 25vw;
+
+    .land {
+      fill: #a15151;
+      fill-opacity: 1;
+      stroke: white;
+      stroke-opacity: 1;
+      stroke-width: 0.5;
+      transition: all 0.5s ease;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-0.5em);
+        filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.7));
+      }
+    }
+  }
 }
 
-#syriaMiddle {
-  @include absoluteCenter;
+.countryHeader {
+  margin-top: 8rem;
+  align-self: center;
+  color: black;
+  font-family: Krona One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 90px;
 }
 
-.land {
-  fill: #cccccc;
-  fill-opacity: 1;
-  stroke: white;
-  stroke-opacity: 1;
-  stroke-width: 0.5;
-  transition: all 0.5s ease;
-}
+.article{
 
-.land:hover {
-  cursor: pointer;
-  transform: translateY(-0.5em);
+width: 40%;
+align-self: center;
+
 }
 
 //? //? //? //?
@@ -518,7 +526,6 @@ body {
   }
 
   #cardContainer .content .card {
-
     width: 400px;
     height: 300px;
 
@@ -599,7 +606,6 @@ body {
   }
 
   #cardContainer .content .card {
-
     width: 370px;
     height: 300px;
 
@@ -645,7 +651,6 @@ body {
   }
 
   #cardContainer .content .card {
-
     width: 300px;
     height: 300px;
 

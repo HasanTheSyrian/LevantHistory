@@ -2,8 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@700&family=Sen&display=swap");
-@import url("https://cdn.discordapp.com/attachments/282502094202732544/851734952554790922/Andalus.ttf");
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 :root {
   --bg: #ffe6de;
   --w: white;
@@ -38,6 +36,12 @@
   --paragraph: var(--axyTwo);
   --card: var(--bg);
   --headerTxtHvr: var(--headerAxyHover);
+}
+
+@font-face {
+  font-family: "Andalus";
+  src: url("//db.onlinewebfonts.com/t/8269ea45efd48785edffb3ed85a5dc8a.eot");
+  src: url("//db.onlinewebfonts.com/t/8269ea45efd48785edffb3ed85a5dc8a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8269ea45efd48785edffb3ed85a5dc8a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8269ea45efd48785edffb3ed85a5dc8a.woff") format("woff"), url("//db.onlinewebfonts.com/t/8269ea45efd48785edffb3ed85a5dc8a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8269ea45efd48785edffb3ed85a5dc8a.svg#Andalus") format("svg");
 }
 
 html {
@@ -493,20 +497,27 @@ body {
   margin: 3px;
 }
 
-.country {
+#syriaPage {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #ffe6de;
 }
 
-#syriaMiddle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate -100%;
-          transform: translate -100%;
+#syriaPage #syriaMiddle {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 25vw;
 }
 
-.land {
-  fill: #cccccc;
+#syriaPage #syriaMiddle .land {
+  fill: #a15151;
   fill-opacity: 1;
   stroke: white;
   stroke-opacity: 1;
@@ -515,10 +526,32 @@ body {
   transition: all 0.5s ease;
 }
 
-.land:hover {
+#syriaPage #syriaMiddle .land:hover {
   cursor: pointer;
   -webkit-transform: translateY(-0.5em);
           transform: translateY(-0.5em);
+  -webkit-filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.7));
+          filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.7));
+}
+
+.countryHeader {
+  margin-top: 8rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: black;
+  font-family: Krona One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 90px;
+}
+
+.article {
+  width: 40%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 @media only screen and (max-width: 1920px) and (min-height: 1080px) {
