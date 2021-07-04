@@ -1,10 +1,12 @@
 @import "_variables";
 @import "_mixins";
 
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Lora:wght@700&display=swap"); //Alegreya
+@import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@700&family=Sen&display=swap"); //Sen
+@import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@700&display=swap"); //Fahwkwang
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap"); //Lora
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap"); //Krona One
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap"); //Alata
-@import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@700&display=swap"); //Fahwkwang
-@import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@700&family=Sen&display=swap"); //Sen
 
 @font-face {
   font-family: "Andalus";
@@ -385,11 +387,15 @@ body {
   margin: 3px;
 }
 
+.footerLink {
+  text-decoration: none;
+}
+
 //!syria page
 //!syria page
 
 #syriaPage {
-  height: 100vh;
+  // height: 100vh;
   // @include flexCenter(center, center);
   display: flex;
   flex-direction: column;
@@ -422,19 +428,71 @@ body {
   align-self: center;
   color: black;
   font-family: Krona One;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 72px;
-  line-height: 90px;
+  // font-size: 72px;
+  font-size: clamp(3rem, 4vw, 6rem);
 }
 
-.article{
-
-width: 40%;
-align-self: center;
-
+.article {
+  width: 55%;
+  align-self: center;
+  &:last-child {
+    margin-bottom: 5rem;
+  }
 }
 
+.headerIntro {
+  font-family: Lora;
+  font-size: clamp(3rem, 4vw, 6rem);
+
+  margin-bottom: 2rem;
+  color: #a15151;
+}
+
+.paraIntro {
+  font-family: Alegreya;
+  font-size: clamp(2rem, 2vw, 10rem);
+
+  margin-bottom: 3rem;
+
+  color: #000000;
+  &::first-letter {
+    font-size: clamp(4rem, 4vw, 10rem);
+
+    float: left;
+    margin-left: 3rem;
+  }
+}
+
+.headerBody {
+  font-family: Lora;
+  font-size: clamp(2rem, 2vw, 6rem);
+
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.paraBody {
+  font-family: Alegreya;
+  font-size: clamp(0.5rem, 1.7rem, 6rem);
+
+  // font-size: 25px;
+
+  color: #000000;
+  &::first-letter {
+    margin-left: 3rem;
+  }
+}
+
+.middle {
+  font-family: Alegreya;
+  text-align: center;
+  margin: 5rem 0 5rem 0;
+  font-size: clamp(0.5rem, 1.7rem, 6rem);
+}
+
+//? //? //? //?
+//? //? //? //?
+//? //? //? //?
 //? //? //? //?
 
 @media only screen and (max-width: 1920px) and (min-height: 1080px) {
@@ -468,6 +526,30 @@ align-self: center;
 
   #thirdSection {
     display: none;
+  }
+
+  .article {
+    width: 65%;
+  }
+
+  .headerIntro {
+    font-size: clamp(3rem, 4vw, 6rem);
+  }
+
+  .paraIntro {
+    font-size: clamp(1.5rem, 1vw, 5rem);
+  }
+
+  .headerBody {
+    font-size: clamp(1.9rem, 2vw, 6rem);
+  }
+
+  .paraBody {
+    font-size: clamp(1.3rem, 1vw, 6rem);
+  }
+
+  .middle {
+    font-size: clamp(1.3rem, 1vw, 6rem);
   }
 }
 
@@ -543,6 +625,36 @@ align-self: center;
     #lebanon {
       width: 50%;
     }
+  }
+
+  #syriaPage #syriaMiddle{
+
+    width: 50%;
+
+  }
+
+  .article {
+    width: 75%;
+  }
+
+  .headerIntro {
+    font-size: clamp(2.5rem, 4vw, 6rem);
+  }
+
+  .paraIntro {
+    font-size: clamp(1.4rem, 1vw, 5rem);
+  }
+
+  .headerBody {
+    font-size: clamp(1.7rem, 2vw, 6rem);
+  }
+
+  .paraBody {
+    font-size: clamp(1.2rem, 1vw, 6rem);
+  }
+
+  .middle {
+    font-size: clamp(1.2rem, 1vw, 6rem);
   }
 }
 
