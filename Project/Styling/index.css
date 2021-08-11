@@ -322,8 +322,7 @@ body {
   cursor: grab;
   border-radius: 10px;
   height: 390px;
-  scrollbar-color: #ffb59c #ffffff;
-  scrollbar-width: thin;
+  scrollbar-width: none;
   overflow: hidden;
   overflow-x: auto;
   position: relative;
@@ -335,6 +334,11 @@ body {
           align-items: center;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+
+#cardContainer::-webkit-scrollbar {
+  display: none !important;
+  width: 2px;
 }
 
 #cardContainer .shadowSide {
@@ -398,6 +402,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  pointer-events: none;
 }
 
 #cardContainer .content .card:hover {

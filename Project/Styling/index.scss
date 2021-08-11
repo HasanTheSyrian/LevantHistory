@@ -252,8 +252,9 @@ body {
   border-radius: 10px;
   height: 390px;
 
-  scrollbar-color: #ffb59c #ffffff;
-  scrollbar-width: thin;
+  //firefox
+  // scrollbar-color: #ffb59c #ffffff;
+  scrollbar-width: none;
 
   overflow: hidden;
   overflow-x: auto;
@@ -262,6 +263,11 @@ body {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+    width: 2px;
+  }
 
   .shadowSide {
     position: sticky;
@@ -305,6 +311,8 @@ body {
 
       .cardCountry {
         user-select: none;
+        // user-drag: none;
+        pointer-events: none;
       }
 
       &:hover {
@@ -627,10 +635,8 @@ body {
     }
   }
 
-  #syriaPage #syriaMiddle{
-
+  #syriaPage #syriaMiddle {
     width: 50%;
-
   }
 
   .article {
