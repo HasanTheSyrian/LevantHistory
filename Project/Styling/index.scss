@@ -15,7 +15,6 @@
 }
 
 //SCROLL BAR
-
 html {
   scrollbar-color: #ffb59c #ffffff;
   scrollbar-width: thin;
@@ -62,6 +61,23 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-color: #ffe6de;
+}
+
+.land {
+  fill: #a15151;
+  fill-opacity: 1;
+  stroke: white;
+  stroke-opacity: 1;
+  stroke-width: 0.5;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear infinite;
+  animation-iteration-count: infinite;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .header {
@@ -420,6 +436,7 @@ body {
       stroke: white;
       stroke-opacity: 1;
       stroke-width: 0.5;
+
       transition: all 0.5s ease;
 
       &:hover {

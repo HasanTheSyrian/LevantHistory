@@ -106,6 +106,32 @@ body {
   background-color: #ffe6de;
 }
 
+.land {
+  fill: #a15151;
+  fill-opacity: 1;
+  stroke: white;
+  stroke-opacity: 1;
+  stroke-width: 0.5;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 1000;
+  -webkit-animation: dash 5s linear infinite;
+          animation: dash 5s linear infinite;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 .header {
   background-color: var(--headerBG);
   height: 80px;
