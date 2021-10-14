@@ -15,7 +15,11 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1"
   },
+  "quokka": {
+    "jsdom": true
+  },
   "dependencies": {
+    "jsdom": "^18.0.0",
     "sass": "^1.35.1"
   }
 }

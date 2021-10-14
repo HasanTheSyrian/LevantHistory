@@ -1,5 +1,27 @@
 const container = document.querySelector("#cardContainer");
 const card = document.querySelector(".card");
+const textOne = document.querySelector("#firstText");
+const dividerOne = document.querySelector("#firstDivider");
+const textTwo = document.querySelector("#secondText");
+const dividerTwo = document.querySelector("#secondDivider");
+
+const marginRightParse = () => {
+  const textOneMargin = window.getComputedStyle(textOne);
+  const textOneParse = parseInt(textOneMargin.marginRight, 10);
+
+  return textOneParse;
+};
+
+dividerOne.style.marginRight = `${marginRightParse() / 2}px`;
+
+const marginLeftParse = () => {
+  const textTwoMargin = window.getComputedStyle(textTwo);
+  const textTwoParse = parseInt(textTwoMargin.marginLeft, 10);
+
+  return textTwoParse;
+};
+
+dividerTwo.style.margin = `${marginLeftParse() / -2}px`;
 
 const widthParse = () => {
   const parentDivWidth = window.getComputedStyle(card, null).getPropertyValue("width");
@@ -69,10 +91,6 @@ ready(() => {
         console.log(e.target);
       }
     });
-
-    // currentCard.addEventListener("click", () => {
-    //   currentCard.classList.toggle("red");
-    // });
   });
 
   document.addEventListener("mousemove", (f) => {

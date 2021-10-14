@@ -10,7 +10,7 @@ module.exports = {
   },
   rules: {
     "linebreak-style":       "off",
-    quotes:                  "off",
+    "quotes":                "off",
     "key-spacing":           ["error", { align: "value" }],
     "quote-props":           "off",
     "eol-last":              "off",
@@ -28,5 +28,8 @@ module.exports = {
     "no-use-before-define":  "off",
     "no-unused-vars":        "off",
     "no-restricted-globals": "off",
+    "func-names":            "off",
+    "no-plusplus":           "off",
+    "prefer-const":          "off"
   },
 };

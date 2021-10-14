@@ -1,3 +1,4 @@
+@import "mediaqueries";
 @import "_variables";
 @import "_mixins";
 
@@ -327,7 +328,6 @@ body {
 
       .cardCountry {
         user-select: none;
-        // user-drag: none;
         pointer-events: none;
       }
 
@@ -351,50 +351,66 @@ body {
 
   @include flexCenter(flex-start, center);
   flex-direction: row;
-  position: relative;
-}
+  padding: 3em;
 
-#footerLogo {
-  width: 70px;
-  min-width: 50px;
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 5vw 0 5vw;
-}
+  #footerLogo {
+    width: 3%;
+    margin-right: 2em; //! make sure these margins are always the same
+  }
 
-.footerDivider {
-  background-color: rgba(255, 255, 255, 0.637);
-  width: 1px;
-  height: 70%;
-  margin: 0 3rem 0 0;
-}
+  .textContainer {
+    @include flexCenter(center, flex-start);
+    flex-direction: row-reverse;
+    position: relative;
 
-#secondDivider {
-  margin: 0 3rem 0 3rem;
-}
+    #firstText {
+      margin-right: 2em; //! make sure these margins are always the same
+    }
 
-.textContainer {
-  @include flexCenter(center, center);
-  flex-direction: row;
-}
+    #secondText {
+      margin-left: 2em; //! make sure these margins are always the same
+    }
 
-.footerH {
-  font-size: clamp(0.5rem, 2rem, 4rem);
-  text-align: left;
-  margin: 0;
-  color: var(--axyOne);
-}
+    .footerText {
+      margin: 1em;
 
-#dev {
-  align-self: flex-start;
-  margin-left: 2rem;
-}
+      .footerH {
+        font-size: clamp(0.5rem, 2rem, 4rem);
+        text-align: left;
+        margin: 0;
+        color: var(--axyOne);
+      }
 
-#footer .footerText p {
-  font-size: clamp(1rem, 1vw, 2rem);
+      & p {
+        font-size: clamp(1rem, 1vw, 2rem);
 
-  color: white;
-  margin: 1px;
+        color: white;
+        margin: 1px;
+      }
+    }
+
+    .footerDivider {
+      background-color: white;
+      width: 1px;
+      height: 140px;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+
+    #firstDivider {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #secondDivder {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 }
 
 #thirdSection {
@@ -409,6 +425,7 @@ body {
 #footer #mwl {
   color: white;
   margin: 3px;
+  // margin-left: 2em;
 }
 
 .footerLink {
@@ -419,8 +436,7 @@ body {
 //!syria page
 
 #syriaPage {
-  // height: 100vh;
-  // @include flexCenter(center, center);
+
   display: flex;
   flex-direction: column;
   background-color: #ffe6de;
@@ -500,8 +516,6 @@ body {
   font-family: Alegreya;
   font-size: clamp(0.5rem, 1.7rem, 6rem);
 
-  // font-size: 25px;
-
   color: #000000;
   &::first-letter {
     margin-left: 3rem;
@@ -513,295 +527,4 @@ body {
   text-align: center;
   margin: 5rem 0 5rem 0;
   font-size: clamp(0.5rem, 1.7rem, 6rem);
-}
-
-//? //? //? //?
-//? //? //? //?
-//? //? //? //?
-//? //? //? //?
-
-@media only screen and (max-width: 1920px) and (min-height: 1080px) {
-  br {
-    display: none;
-  }
-}
-
-//?
-
-@media only screen and (max-width: 1120px) {
-  #mainContent {
-    width: 90%;
-  }
-
-  #second {
-    width: 90%;
-  }
-
-  #mainContent h2 {
-    margin: 3rem 0 0.75rem 0;
-  }
-
-  .countries {
-    display: none;
-  }
-
-  br {
-    display: none;
-  }
-
-  #thirdSection {
-    display: none;
-  }
-
-  .article {
-    width: 65%;
-  }
-
-  .headerIntro {
-    font-size: clamp(3rem, 4vw, 6rem);
-  }
-
-  .paraIntro {
-    font-size: clamp(1.5rem, 1vw, 5rem);
-  }
-
-  .headerBody {
-    font-size: clamp(1.9rem, 2vw, 6rem);
-  }
-
-  .paraBody {
-    font-size: clamp(1.3rem, 1vw, 6rem);
-  }
-
-  .middle {
-    font-size: clamp(1.3rem, 1vw, 6rem);
-  }
-}
-
-//?
-
-@media only screen and (max-width: 700px) {
-  #pageOne {
-    background: url(../Pictures/tabletBG.svg) no-repeat center center fixed;
-  }
-
-  #mainContent {
-    width: 90%;
-  }
-
-  #mainContent h1 {
-    font-size: clamp(3.5rem, 4vw, 6rem);
-  }
-
-  #mainContent h2 {
-    font-size: clamp(3rem, 2vw, 5rem);
-    margin: 2rem 0 0.75rem 0;
-  }
-
-  #mainContent .paragraph {
-    font-size: clamp(1.5rem, 3vw, 1.9rem);
-  }
-
-  .countries {
-    display: none;
-  }
-
-  br {
-    display: none;
-  }
-
-  .footerH {
-    font-size: clamp(0.3rem, 1.5rem, 2rem);
-    text-align: left;
-    margin: 0;
-    color: var(--axyOne);
-  }
-
-  #footer .footerText p {
-    font-size: clamp(0.8rem, 1vw, 1.5rem);
-
-    color: white;
-    margin: 1px;
-  }
-
-  #footerLogo {
-    width: 40px;
-  }
-
-  #cardContainer {
-    width: 450px;
-  }
-
-  #cardContainer .content .card {
-    width: 400px;
-    height: 300px;
-
-    margin: 5px;
-
-    .cardCountry {
-      width: 75%;
-    }
-
-    #palestine {
-      width: 25%;
-    }
-
-    #jordan,
-    #lebanon {
-      width: 50%;
-    }
-  }
-
-  #syriaPage #syriaMiddle {
-    width: 50%;
-  }
-
-  .article {
-    width: 75%;
-  }
-
-  .headerIntro {
-    font-size: clamp(2.5rem, 4vw, 6rem);
-  }
-
-  .paraIntro {
-    font-size: clamp(1.4rem, 1vw, 5rem);
-  }
-
-  .headerBody {
-    font-size: clamp(1.7rem, 2vw, 6rem);
-  }
-
-  .paraBody {
-    font-size: clamp(1.2rem, 1vw, 6rem);
-  }
-
-  .middle {
-    font-size: clamp(1.2rem, 1vw, 6rem);
-  }
-}
-
-//?
-
-@media only screen and (max-width: 500px) and (max-height: 1000px) {
-  #pageOne {
-    background: url(../Pictures/mobileBG.svg) no-repeat center center fixed;
-  }
-}
-
-//?
-
-@media only screen and (max-width: 500px) {
-  .header {
-    height: 60px;
-  }
-
-  #headerText a #logo {
-    width: 20px;
-  }
-
-  #headerText #settings {
-    width: 20px;
-  }
-
-  #mainContent h1 {
-    margin-top: 1rem;
-    font-size: clamp(3rem, 4vw, 6rem);
-  }
-
-  #mainContent h2 {
-    font-size: clamp(2.5rem, 2vw, 5rem);
-    margin: 2rem 0 0.75rem 0;
-  }
-
-  #mainContent .paragraph {
-    font-size: clamp(1.3rem, 2vw, 1.9rem);
-  }
-
-  #mainContent #second {
-    font-size: clamp(1rem, 4vw, 1.9rem);
-  }
-
-  .footerH {
-    font-size: clamp(1rem, 2vw, 2rem);
-  }
-
-  .footerDivider,
-  #secondDivider {
-    margin: 1rem;
-  }
-
-  #dev {
-    align-self: flex-start;
-    margin-left: 2rem;
-  }
-
-  #cardContainer {
-    width: 400px;
-  }
-
-  #cardContainer .content .card {
-    width: 370px;
-    height: 300px;
-
-    margin: 5px;
-
-    .cardCountry {
-      width: 75%;
-    }
-
-    #palestine {
-      width: 25%;
-    }
-
-    #jordan,
-    #lebanon {
-      width: 50%;
-    }
-  }
-}
-
-//?
-
-@media only screen and (max-width: 400px) {
-  #mainContent h1 {
-    font-size: clamp(2rem, 4vw, 6rem);
-  }
-
-  #mainContent h2 {
-    font-size: clamp(1.5rem, 2vw, 5rem);
-    margin: 2rem 0 0.75rem 0;
-  }
-
-  #mainContent .paragraph {
-    font-size: clamp(1rem, 2vw, 1.9rem);
-  }
-
-  #mainContent #second {
-    font-size: clamp(0.7rem, 4vw, 1.9rem);
-  }
-
-  #cardContainer {
-    width: 350px;
-  }
-
-  #cardContainer .content .card {
-    width: 300px;
-    height: 300px;
-
-    margin: 5px;
-
-    .cardCountry {
-      width: 75%;
-    }
-
-    #palestine {
-      width: 25%;
-    }
-
-    #jordan,
-    #lebanon {
-      width: 50%;
-    }
-  }
 }
