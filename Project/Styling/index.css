@@ -271,6 +271,11 @@ html {
   background-color: #ffe6de;
 }
 
+[type="button"],
+button {
+  -webkit-appearance: none;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -405,6 +410,7 @@ body {
   position: absolute;
   right: 0;
   margin: 1rem;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .header #offcanvasRight {
