@@ -1,4 +1,4 @@
-@import "mediaqueries";
+@import "_mediaqueries";
 @import "_variables";
 @import "_mixins";
 
@@ -360,7 +360,10 @@ body {
   padding: 3em;
 
   #footerLogo {
-    width: 3%;
+    // width: 3%;
+    // min-width: 20px;
+    width: clamp(2.5em, 3em, 4rem);
+    // width: 2em;
     margin-right: 2em; //! make sure these margins are always the same
   }
 
