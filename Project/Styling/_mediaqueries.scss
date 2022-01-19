@@ -13,52 +13,47 @@
 //?
 
 @media only screen and (max-width: 1120px) {
-  #mainContent {
-    width: 90%;
-  }
-
-  #second {
-    width: 90%;
-  }
-
-  #mainContent h2 {
-    margin: 3rem 0 0.75rem 0;
-  }
-
-  .countries {
+  .header #headerText .countries {
     display: none;
   }
 
-  br {
+  #pageOne #mainContent {
+    h2 {
+      margin: 3rem 0 0.75rem 0;
+    }
+
+    #second {
+      width: 90%;
+    }
+  }
+
+  #footer #thirdSection {
     display: none;
   }
 
-  #thirdSection {
-    display: none;
-  }
-
-  .article {
+  #syriaPage .article {
+    //!
     width: 65%;
-  }
 
-  .headerIntro {
-    font-size: clamp(3rem, 4vw, 6rem);
-  }
+    .headerIntro {
+      font-size: clamp(3rem, 4vw, 6rem);
+    }
 
-  .paraIntro {
-    font-size: clamp(1.5rem, 1vw, 5rem);
-  }
+    .paraIntro {
+      font-size: clamp(1.5rem, 1vw, 5rem);
+    }
 
-  .headerBody {
-    font-size: clamp(1.9rem, 2vw, 6rem);
-  }
+    .headerBody {
+      font-size: clamp(1.9rem, 2vw, 6rem);
+    }
 
-  .paraBody {
-    font-size: clamp(1.3rem, 1vw, 6rem);
-  }
+    .paraBody {
+      font-size: clamp(1.3rem, 1vw, 6rem);
+    }
 
-  .middle {
-    font-size: clamp(1.3rem, 1vw, 6rem);
+    .middle {
+      font-size: clamp(1.3rem, 1vw, 6rem);
+    }
   }
 }
 
@@ -71,72 +66,76 @@
 
   #mainContent {
     width: 90%;
+
+    h1 {
+      font-size: clamp(3.5rem, 4vw, 6rem);
+    }
+
+    h2 {
+      font-size: clamp(3rem, 2vw, 5rem);
+      margin: 2rem 0 0.75rem 0;
+    }
+
+    .paragraph {
+      font-size: clamp(1.5rem, 3vw, 1.9rem);
+    }
   }
 
-  #mainContent h1 {
-    font-size: clamp(3.5rem, 4vw, 6rem);
-  }
+  #footer {
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 1.5rem !important;
 
-  #mainContent h2 {
-    font-size: clamp(3rem, 2vw, 5rem);
-    margin: 2rem 0 0.75rem 0;
-  }
+    #footerLogo {
+      width: 40px;
+      margin: 0;
+    }
 
-  #mainContent .paragraph {
-    font-size: clamp(1.5rem, 3vw, 1.9rem);
-  }
+    .textContainer {
+      .footerDivider {
+        display: none;
+      }
 
-  .countries {
-    display: none;
-  }
+      .footerText {
+        .footerH {
+          font-size: clamp(0.3rem, 1.5rem, 2rem);
+          text-align: center;
+          margin: 0;
+          color: var(--axyOne);
+        }
 
-  br {
-    display: none;
-  }
+        p {
+          font-size: clamp(0.8rem, 1vw, 1.5rem);
 
-  .footerH {
-    font-size: clamp(0.3rem, 1.5rem, 2rem);
-    text-align: left;
-    margin: 0;
-    color: var(--axyOne);
-  }
-
-  // #footer {
-  //   flex-direction: column !important;
-  // }
-
-  #footer .textContainer .footerText p {
-    font-size: clamp(0.8rem, 1vw, 1.5rem);
-
-    color: white;
-    margin: 1px;
-  }
-
-  #footerLogo {
-    width: 40px;
+          color: white;
+          margin: 1px;
+          text-align: center;
+        }
+      }
+    }
   }
 
   #cardContainer {
     width: 450px;
-  }
 
-  #cardContainer .content .card {
-    width: 400px;
-    height: 300px;
+    .content .card {
+      width: 400px;
+      height: 300px;
 
-    margin: 5px;
+      margin: 5px;
 
-    .cardCountry {
-      width: 75%;
-    }
+      .cardCountry {
+        width: 75%;
+      }
 
-    #palestine {
-      width: 25%;
-    }
+      #palestine {
+        width: 25%;
+      }
 
-    #jordan,
-    #lebanon {
-      width: 50%;
+      #jordan,
+      #lebanon {
+        width: 50%;
+      }
     }
   }
 
@@ -144,28 +143,28 @@
     width: 50%;
   }
 
-  .article {
+  #syriaPage .article {
     width: 75%;
-  }
 
-  .headerIntro {
-    font-size: clamp(2.5rem, 4vw, 6rem);
-  }
+    .headerIntro {
+      font-size: clamp(2.5rem, 4vw, 6rem);
+    }
 
-  .paraIntro {
-    font-size: clamp(1.4rem, 1vw, 5rem);
-  }
+    .paraIntro {
+      font-size: clamp(1.4rem, 1vw, 5rem);
+    }
 
-  .headerBody {
-    font-size: clamp(1.7rem, 2vw, 6rem);
-  }
+    .headerBody {
+      font-size: clamp(1.7rem, 2vw, 6rem);
+    }
 
-  .paraBody {
-    font-size: clamp(1.2rem, 1vw, 6rem);
-  }
+    .paraBody {
+      font-size: clamp(1.2rem, 1vw, 6rem);
+    }
 
-  .middle {
-    font-size: clamp(1.2rem, 1vw, 6rem);
+    .middle {
+      font-size: clamp(1.2rem, 1vw, 6rem);
+    }
   }
 }
 
@@ -184,35 +183,61 @@
     height: 60px;
   }
 
-  #headerText a #logo {
-    width: 20px;
+  #headerText {
+    #settings {
+      width: 20px;
+    }
+    a #logo {
+      width: 20px;
+    }
   }
 
-  #headerText #settings {
-    width: 20px;
+  #mainContent {
+    h1 {
+      margin-top: 1rem;
+      font-size: clamp(3rem, 4vw, 6rem);
+    }
+
+    h2 {
+      font-size: clamp(2.5rem, 2vw, 5rem);
+      margin: 2rem 0 0.75rem 0;
+    }
+
+    .paragraph {
+      font-size: clamp(1.3rem, 2vw, 1.9rem);
+    }
+
+    #second {
+      font-size: clamp(1rem, 4vw, 1.9rem);
+    }
   }
 
-  #mainContent h1 {
-    margin-top: 1rem;
-    font-size: clamp(3rem, 4vw, 6rem);
-  }
+  html body #footer {
 
-  #mainContent h2 {
-    font-size: clamp(2.5rem, 2vw, 5rem);
-    margin: 2rem 0 0.75rem 0;
-  }
+    #footerLogo{
+      margin: 0;
+    }
 
-  #mainContent .paragraph {
-    font-size: clamp(1.3rem, 2vw, 1.9rem);
-  }
+    .textContainer .footerText {
+    //  margin: 0 !important;
 
-  #mainContent #second {
-    font-size: clamp(1rem, 4vw, 1.9rem);
-  }
+      #middleText{
+        margin: 10px !important;
+      }
 
-  .footerH {
-    font-size: clamp(1rem, 2vw, 2rem);
+      .footerH {
+        text-align: center !important;
+        font-size: clamp(0.3em, 1.75rem, 2em) !important;
+      }
+      p {
+        font-size: clamp(0.7em, 2.5rem, 3vw) !important;
+        margin: 10px 0 10px 0 !important;
+      }
+    }
   }
+  // .footerH {
+  //   font-size: clamp(1rem, 2vw, 2rem);
+  // }
 
   .footerDivider,
   #secondDivider {
