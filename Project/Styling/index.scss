@@ -358,13 +358,16 @@ body {
   @include flexCenter(flex-start, center);
   flex-direction: row;
   padding: 3em;
+  padding-left: 0;
 
   #footerLogo {
     // width: 3%;
     // min-width: 20px;
     width: clamp(2.5em, 3em, 4rem);
     // width: 2em;
-    margin-right: 2em; //! make sure these margins are always the same
+    //margin-right: 2em; //! make sure these margins are always the same
+    //margin-left: 2em;
+    margin: 0 2em 0 2em;
   }
 
   .textContainer {
