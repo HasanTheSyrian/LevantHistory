@@ -22,6 +22,14 @@ html {
   background-color: #ffe6de;
 }
 
+.open{
+  display: block;
+}
+
+.close{
+  display: none;
+}
+
 //? removes bootrap background color glitch on safari
 [type="button"],
 button {
