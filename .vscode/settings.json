@@ -1,8 +1,0 @@
-{
-  "liveServer.settings.port": 5502,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "eslint.validate": ["javascript"],
-  "C_Cpp.errorSquiggles": "Disabled"
-}
